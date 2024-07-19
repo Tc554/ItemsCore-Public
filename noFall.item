@@ -1,0 +1,187 @@
+item:
+  name: noFall
+  fancyName: '&eNo Fall!'
+  id: no_fall
+  material: CHAINMAIL_BOOTS
+  needBlock: BOTH
+  code: item.setPlayerDamageEvent(core.createRunnable('core.doIf(core.getSpecialVariable(event, "causeName")===values.value("FALL"), \'event.setCancelled(true)\');'));
+  stats: []
+  lore:
+  - "\xa77You won't recieve fall damage"
+  - "\xa77while equipped"
+  recipe: []
+  actions:
+  - ==: me.tastycake.itemscore.item.actions.Action
+    operations:
+    - ==: me.tastycake.itemscore.utils.Operation
+      left: &id001
+        ==: me.tastycake.itemscore.utils.MethodSlot
+        prefix: core.
+        variable: false
+        methodName: doIf
+        slot: 0
+      slot: 1
+      right: null
+      operation: NONE
+    - ==: me.tastycake.itemscore.utils.Operation
+      left: null
+      slot: 3
+      right: null
+      operation: NONE
+    - ==: me.tastycake.itemscore.utils.Operation
+      left: null
+      slot: 5
+      right: null
+      operation: NONE
+    - ==: me.tastycake.itemscore.utils.Operation
+      left: null
+      slot: 7
+      right: null
+      operation: NONE
+    methods:
+      ==: me.tastycake.itemscore.item.actions.ActionMap
+      methods:
+      - *id001
+      params:
+      - - ==: me.tastycake.itemscore.utils.Param
+          action: true
+          slot: 9
+          type: java.lang.Boolean
+          value:
+            ==: me.tastycake.itemscore.item.actions.Action
+            operations:
+            - ==: me.tastycake.itemscore.utils.Operation
+              left: &id003
+                ==: me.tastycake.itemscore.utils.MethodSlot
+                prefix: core.
+                variable: false
+                methodName: getSpecialVariable
+                slot: 0
+              slot: 1
+              right: &id002
+                ==: me.tastycake.itemscore.utils.MethodSlot
+                prefix: values.
+                variable: false
+                methodName: value
+                slot: 2
+              operation: EQUALS
+            - ==: me.tastycake.itemscore.utils.Operation
+              left: *id002
+              slot: 3
+              right: null
+              operation: NONE
+            - ==: me.tastycake.itemscore.utils.Operation
+              left: null
+              slot: 5
+              right: null
+              operation: NONE
+            - ==: me.tastycake.itemscore.utils.Operation
+              left: null
+              slot: 7
+              right: null
+              operation: NONE
+            methods:
+              ==: me.tastycake.itemscore.item.actions.ActionMap
+              methods:
+              - *id003
+              - *id002
+              params:
+              - - ==: me.tastycake.itemscore.utils.Param
+                  action: false
+                  slot: 9
+                  type: org.bukkit.event.Event
+                  value:
+                    ==: me.tastycake.itemscore.item.actions.Action
+                    operations:
+                    - ==: me.tastycake.itemscore.utils.Operation
+                      left: &id004
+                        ==: me.tastycake.itemscore.utils.MethodSlot
+                        prefix: ''
+                        variable: true
+                        methodName: event
+                        slot: 0
+                      slot: 1
+                      right: null
+                      operation: NONE
+                    - ==: me.tastycake.itemscore.utils.Operation
+                      left: null
+                      slot: 3
+                      right: null
+                      operation: NONE
+                    - ==: me.tastycake.itemscore.utils.Operation
+                      left: null
+                      slot: 5
+                      right: null
+                      operation: NONE
+                    - ==: me.tastycake.itemscore.utils.Operation
+                      left: null
+                      slot: 7
+                      right: null
+                      operation: NONE
+                    methods:
+                      ==: me.tastycake.itemscore.item.actions.ActionMap
+                      methods:
+                      - *id004
+                      params:
+                      - []
+                    action: '9'
+                - ==: me.tastycake.itemscore.utils.Param
+                  action: false
+                  slot: 18
+                  type: java.lang.String
+                  value: causeName
+              - - ==: me.tastycake.itemscore.utils.Param
+                  action: false
+                  slot: 11
+                  type: java.lang.String
+                  value: FALL
+            action: '9'
+        - ==: me.tastycake.itemscore.utils.Param
+          action: true
+          slot: 18
+          type: java.lang.String
+          value:
+            ==: me.tastycake.itemscore.item.actions.Action
+            operations:
+            - ==: me.tastycake.itemscore.utils.Operation
+              left: &id005
+                ==: me.tastycake.itemscore.utils.MethodSlot
+                prefix: event.
+                variable: false
+                methodName: setCancelled
+                slot: 0
+              slot: 1
+              right: null
+              operation: NONE
+            - ==: me.tastycake.itemscore.utils.Operation
+              left: null
+              slot: 3
+              right: null
+              operation: NONE
+            - ==: me.tastycake.itemscore.utils.Operation
+              left: null
+              slot: 5
+              right: null
+              operation: NONE
+            - ==: me.tastycake.itemscore.utils.Operation
+              left: null
+              slot: 7
+              right: null
+              operation: NONE
+            methods:
+              ==: me.tastycake.itemscore.item.actions.ActionMap
+              methods:
+              - *id005
+              params:
+              - - ==: me.tastycake.itemscore.utils.Param
+                  action: false
+                  slot: 9
+                  type: java.lang.Boolean
+                  value: true
+            action: '18'
+    action: playerDamageEvent
+  flags: []
+  enchantments:
+    ==: me.tastycake.itemscore.item.EnchantedMap
+    enchantments: []
+    levels: []

@@ -1,0 +1,712 @@
+item:
+  name: soulWhip
+  fancyName: '&6&lSoul Whip'
+  id: soul_whip
+  material: FISHING_ROD
+  needBlock: BOTH
+  code: item.setLeftAction(core.createRunnable('core.shootProjectile(player,  core.getEyeLocation(player), "particle", "SMOKE_NORMAL", 75, true, core.createEquationVector("t*0.12", "sin(t / 2) / 2", "0"));'));item.setProjectileHitBlockEvent(core.createRunnable('core.createParticleByLocation(core.getSpecialVariable(event,  "lastLocation"), "EXPLOSION_HUGE", 0, 2, 1);core.createExplosionByLocation(core.getSpecialVariable(event,  "lastLocation"), 3);'));item.setProjectileHitEntityEvent(core.createRunnable('core.loop(\'core.teleportToLocation(core.getSpecialVariable(event,  "victim"), core.getSpecialVariable(event,  "lastLocation"))\', 100, 1);'));
+  stats: []
+  lore:
+  - "\xa7eLeft click!"
+  recipe: []
+  actions:
+  - ==: me.tastycake.itemscore.item.actions.Action
+    operations:
+    - ==: me.tastycake.itemscore.utils.Operation
+      left: &id001
+        ==: me.tastycake.itemscore.utils.MethodSlot
+        prefix: core.
+        variable: false
+        methodName: shootProjectile
+        slot: 0
+      slot: 1
+      right: null
+      operation: NONE
+    - ==: me.tastycake.itemscore.utils.Operation
+      left: null
+      slot: 3
+      right: null
+      operation: NONE
+    - ==: me.tastycake.itemscore.utils.Operation
+      left: null
+      slot: 5
+      right: null
+      operation: NONE
+    - ==: me.tastycake.itemscore.utils.Operation
+      left: null
+      slot: 7
+      right: null
+      operation: NONE
+    methods:
+      ==: me.tastycake.itemscore.item.actions.ActionMap
+      methods:
+      - *id001
+      params:
+      - - ==: me.tastycake.itemscore.utils.Param
+          action: false
+          slot: 9
+          type: org.bukkit.entity.Player
+          value:
+            ==: me.tastycake.itemscore.item.actions.Action
+            operations:
+            - ==: me.tastycake.itemscore.utils.Operation
+              left: &id002
+                ==: me.tastycake.itemscore.utils.MethodSlot
+                prefix: ''
+                variable: true
+                methodName: player
+                slot: 0
+              slot: 1
+              right: null
+              operation: NONE
+            - ==: me.tastycake.itemscore.utils.Operation
+              left: null
+              slot: 3
+              right: null
+              operation: NONE
+            - ==: me.tastycake.itemscore.utils.Operation
+              left: null
+              slot: 5
+              right: null
+              operation: NONE
+            - ==: me.tastycake.itemscore.utils.Operation
+              left: null
+              slot: 7
+              right: null
+              operation: NONE
+            methods:
+              ==: me.tastycake.itemscore.item.actions.ActionMap
+              methods:
+              - *id002
+              params:
+              - []
+            action: leftAction
+        - ==: me.tastycake.itemscore.utils.Param
+          action: false
+          slot: 18
+          type: me.tastycake.itemscore.item.Item
+          value:
+            ==: me.tastycake.itemscore.item.actions.Action
+            operations:
+            - ==: me.tastycake.itemscore.utils.Operation
+              left: &id003
+                ==: me.tastycake.itemscore.utils.MethodSlot
+                prefix: core.
+                variable: false
+                methodName: getEyeLocation
+                slot: 0
+              slot: 1
+              right: null
+              operation: NONE
+            - ==: me.tastycake.itemscore.utils.Operation
+              left: null
+              slot: 3
+              right: null
+              operation: NONE
+            - ==: me.tastycake.itemscore.utils.Operation
+              left: null
+              slot: 5
+              right: null
+              operation: NONE
+            - ==: me.tastycake.itemscore.utils.Operation
+              left: null
+              slot: 7
+              right: null
+              operation: NONE
+            methods:
+              ==: me.tastycake.itemscore.item.actions.ActionMap
+              methods:
+              - *id003
+              params:
+              - - ==: me.tastycake.itemscore.utils.Param
+                  action: false
+                  slot: 9
+                  type: org.bukkit.entity.Player
+                  value:
+                    ==: me.tastycake.itemscore.item.actions.Action
+                    operations:
+                    - ==: me.tastycake.itemscore.utils.Operation
+                      left: &id004
+                        ==: me.tastycake.itemscore.utils.MethodSlot
+                        prefix: ''
+                        variable: true
+                        methodName: player
+                        slot: 0
+                      slot: 1
+                      right: null
+                      operation: NONE
+                    - ==: me.tastycake.itemscore.utils.Operation
+                      left: null
+                      slot: 3
+                      right: null
+                      operation: NONE
+                    - ==: me.tastycake.itemscore.utils.Operation
+                      left: null
+                      slot: 5
+                      right: null
+                      operation: NONE
+                    - ==: me.tastycake.itemscore.utils.Operation
+                      left: null
+                      slot: 7
+                      right: null
+                      operation: NONE
+                    methods:
+                      ==: me.tastycake.itemscore.item.actions.ActionMap
+                      methods:
+                      - *id004
+                      params:
+                      - []
+                    action: leftAction
+            action: leftAction
+        - ==: me.tastycake.itemscore.utils.Param
+          action: false
+          slot: 27
+          type: java.lang.String
+          value: particle
+        - ==: me.tastycake.itemscore.utils.Param
+          action: false
+          slot: 36
+          type: java.lang.String
+          value: SMOKE_NORMAL
+        - ==: me.tastycake.itemscore.utils.Param
+          action: false
+          slot: 10
+          type: java.lang.Integer
+          value: 75
+        - ==: me.tastycake.itemscore.utils.Param
+          action: false
+          slot: 19
+          type: java.lang.Boolean
+          value: true
+        - ==: me.tastycake.itemscore.utils.Param
+          action: false
+          slot: 28
+          type: me.tastycake.itemscore.item.projectiles.EquationVector
+          value:
+            ==: me.tastycake.itemscore.item.actions.Action
+            operations:
+            - ==: me.tastycake.itemscore.utils.Operation
+              left: &id005
+                ==: me.tastycake.itemscore.utils.MethodSlot
+                prefix: core.
+                variable: false
+                methodName: createEquationVector
+                slot: 0
+              slot: 1
+              right: null
+              operation: NONE
+            - ==: me.tastycake.itemscore.utils.Operation
+              left: null
+              slot: 3
+              right: null
+              operation: NONE
+            - ==: me.tastycake.itemscore.utils.Operation
+              left: null
+              slot: 5
+              right: null
+              operation: NONE
+            - ==: me.tastycake.itemscore.utils.Operation
+              left: null
+              slot: 7
+              right: null
+              operation: NONE
+            methods:
+              ==: me.tastycake.itemscore.item.actions.ActionMap
+              methods:
+              - *id005
+              params:
+              - - ==: me.tastycake.itemscore.utils.Param
+                  action: false
+                  slot: 9
+                  type: java.lang.String
+                  value: t*0.12
+                - ==: me.tastycake.itemscore.utils.Param
+                  action: false
+                  slot: 18
+                  type: java.lang.String
+                  value: sin(t / 2) / 2
+                - ==: me.tastycake.itemscore.utils.Param
+                  action: false
+                  slot: 27
+                  type: java.lang.String
+                  value: '0'
+            action: leftAction
+    action: leftAction
+  - ==: me.tastycake.itemscore.item.actions.Action
+    operations:
+    - ==: me.tastycake.itemscore.utils.Operation
+      left: &id007
+        ==: me.tastycake.itemscore.utils.MethodSlot
+        prefix: core.
+        variable: false
+        methodName: createParticleByLocation
+        slot: 0
+      slot: 1
+      right: &id006
+        ==: me.tastycake.itemscore.utils.MethodSlot
+        prefix: core.
+        variable: false
+        methodName: createExplosionByLocation
+        slot: 2
+      operation: NONE
+    - ==: me.tastycake.itemscore.utils.Operation
+      left: *id006
+      slot: 3
+      right: null
+      operation: NONE
+    - ==: me.tastycake.itemscore.utils.Operation
+      left: null
+      slot: 5
+      right: null
+      operation: NONE
+    - ==: me.tastycake.itemscore.utils.Operation
+      left: null
+      slot: 7
+      right: null
+      operation: NONE
+    methods:
+      ==: me.tastycake.itemscore.item.actions.ActionMap
+      methods:
+      - *id007
+      - *id006
+      params:
+      - - ==: me.tastycake.itemscore.utils.Param
+          action: false
+          slot: 9
+          type: org.bukkit.Location
+          value:
+            ==: me.tastycake.itemscore.item.actions.Action
+            operations:
+            - ==: me.tastycake.itemscore.utils.Operation
+              left: &id008
+                ==: me.tastycake.itemscore.utils.MethodSlot
+                prefix: core.
+                variable: false
+                methodName: getSpecialVariable
+                slot: 0
+              slot: 1
+              right: null
+              operation: NONE
+            - ==: me.tastycake.itemscore.utils.Operation
+              left: null
+              slot: 3
+              right: null
+              operation: NONE
+            - ==: me.tastycake.itemscore.utils.Operation
+              left: null
+              slot: 5
+              right: null
+              operation: NONE
+            - ==: me.tastycake.itemscore.utils.Operation
+              left: null
+              slot: 7
+              right: null
+              operation: NONE
+            methods:
+              ==: me.tastycake.itemscore.item.actions.ActionMap
+              methods:
+              - *id008
+              params:
+              - - ==: me.tastycake.itemscore.utils.Param
+                  action: false
+                  slot: 9
+                  type: org.bukkit.event.Event
+                  value:
+                    ==: me.tastycake.itemscore.item.actions.Action
+                    operations:
+                    - ==: me.tastycake.itemscore.utils.Operation
+                      left: &id009
+                        ==: me.tastycake.itemscore.utils.MethodSlot
+                        prefix: ''
+                        variable: true
+                        methodName: event
+                        slot: 0
+                      slot: 1
+                      right: null
+                      operation: NONE
+                    - ==: me.tastycake.itemscore.utils.Operation
+                      left: null
+                      slot: 3
+                      right: null
+                      operation: NONE
+                    - ==: me.tastycake.itemscore.utils.Operation
+                      left: null
+                      slot: 5
+                      right: null
+                      operation: NONE
+                    - ==: me.tastycake.itemscore.utils.Operation
+                      left: null
+                      slot: 7
+                      right: null
+                      operation: NONE
+                    methods:
+                      ==: me.tastycake.itemscore.item.actions.ActionMap
+                      methods:
+                      - *id009
+                      params:
+                      - []
+                    action: projectileHitBlockEvent
+                - ==: me.tastycake.itemscore.utils.Param
+                  action: false
+                  slot: 18
+                  type: java.lang.String
+                  value: lastLocation
+            action: projectileHitBlockEvent
+        - ==: me.tastycake.itemscore.utils.Param
+          action: false
+          slot: 18
+          type: java.lang.String
+          value: EXPLOSION_HUGE
+        - ==: me.tastycake.itemscore.utils.Param
+          action: false
+          slot: 27
+          type: java.lang.Integer
+          value: 0
+        - ==: me.tastycake.itemscore.utils.Param
+          action: false
+          slot: 36
+          type: java.lang.Integer
+          value: 2
+        - ==: me.tastycake.itemscore.utils.Param
+          action: false
+          slot: 10
+          type: java.lang.Integer
+          value: 1
+      - - ==: me.tastycake.itemscore.utils.Param
+          action: false
+          slot: 11
+          type: org.bukkit.Location
+          value:
+            ==: me.tastycake.itemscore.item.actions.Action
+            operations:
+            - ==: me.tastycake.itemscore.utils.Operation
+              left: &id010
+                ==: me.tastycake.itemscore.utils.MethodSlot
+                prefix: core.
+                variable: false
+                methodName: getSpecialVariable
+                slot: 0
+              slot: 1
+              right: null
+              operation: NONE
+            - ==: me.tastycake.itemscore.utils.Operation
+              left: null
+              slot: 3
+              right: null
+              operation: NONE
+            - ==: me.tastycake.itemscore.utils.Operation
+              left: null
+              slot: 5
+              right: null
+              operation: NONE
+            - ==: me.tastycake.itemscore.utils.Operation
+              left: null
+              slot: 7
+              right: null
+              operation: NONE
+            methods:
+              ==: me.tastycake.itemscore.item.actions.ActionMap
+              methods:
+              - *id010
+              params:
+              - - ==: me.tastycake.itemscore.utils.Param
+                  action: false
+                  slot: 9
+                  type: org.bukkit.event.Event
+                  value:
+                    ==: me.tastycake.itemscore.item.actions.Action
+                    operations:
+                    - ==: me.tastycake.itemscore.utils.Operation
+                      left: &id011
+                        ==: me.tastycake.itemscore.utils.MethodSlot
+                        prefix: ''
+                        variable: true
+                        methodName: event
+                        slot: 0
+                      slot: 1
+                      right: null
+                      operation: NONE
+                    - ==: me.tastycake.itemscore.utils.Operation
+                      left: null
+                      slot: 3
+                      right: null
+                      operation: NONE
+                    - ==: me.tastycake.itemscore.utils.Operation
+                      left: null
+                      slot: 5
+                      right: null
+                      operation: NONE
+                    - ==: me.tastycake.itemscore.utils.Operation
+                      left: null
+                      slot: 7
+                      right: null
+                      operation: NONE
+                    methods:
+                      ==: me.tastycake.itemscore.item.actions.ActionMap
+                      methods:
+                      - *id011
+                      params:
+                      - []
+                    action: projectileHitBlockEvent
+                - ==: me.tastycake.itemscore.utils.Param
+                  action: false
+                  slot: 18
+                  type: java.lang.String
+                  value: lastLocation
+            action: projectileHitBlockEvent
+        - ==: me.tastycake.itemscore.utils.Param
+          action: false
+          slot: 20
+          type: java.lang.Integer
+          value: 3
+    action: projectileHitBlockEvent
+  - ==: me.tastycake.itemscore.item.actions.Action
+    operations:
+    - ==: me.tastycake.itemscore.utils.Operation
+      left: &id012
+        ==: me.tastycake.itemscore.utils.MethodSlot
+        prefix: core.
+        variable: false
+        methodName: loop
+        slot: 0
+      slot: 1
+      right: null
+      operation: NONE
+    - ==: me.tastycake.itemscore.utils.Operation
+      left: null
+      slot: 3
+      right: null
+      operation: NONE
+    - ==: me.tastycake.itemscore.utils.Operation
+      left: null
+      slot: 5
+      right: null
+      operation: NONE
+    - ==: me.tastycake.itemscore.utils.Operation
+      left: null
+      slot: 7
+      right: null
+      operation: NONE
+    methods:
+      ==: me.tastycake.itemscore.item.actions.ActionMap
+      methods:
+      - *id012
+      params:
+      - - ==: me.tastycake.itemscore.utils.Param
+          action: true
+          slot: 9
+          type: java.lang.String
+          value:
+            ==: me.tastycake.itemscore.item.actions.Action
+            operations:
+            - ==: me.tastycake.itemscore.utils.Operation
+              left: &id013
+                ==: me.tastycake.itemscore.utils.MethodSlot
+                prefix: core.
+                variable: false
+                methodName: teleportToLocation
+                slot: 0
+              slot: 1
+              right: null
+              operation: NONE
+            - ==: me.tastycake.itemscore.utils.Operation
+              left: null
+              slot: 3
+              right: null
+              operation: NONE
+            - ==: me.tastycake.itemscore.utils.Operation
+              left: null
+              slot: 5
+              right: null
+              operation: NONE
+            - ==: me.tastycake.itemscore.utils.Operation
+              left: null
+              slot: 7
+              right: null
+              operation: NONE
+            methods:
+              ==: me.tastycake.itemscore.item.actions.ActionMap
+              methods:
+              - *id013
+              params:
+              - - ==: me.tastycake.itemscore.utils.Param
+                  action: false
+                  slot: 9
+                  type: org.bukkit.entity.Entity
+                  value:
+                    ==: me.tastycake.itemscore.item.actions.Action
+                    operations:
+                    - ==: me.tastycake.itemscore.utils.Operation
+                      left: &id014
+                        ==: me.tastycake.itemscore.utils.MethodSlot
+                        prefix: core.
+                        variable: false
+                        methodName: getSpecialVariable
+                        slot: 0
+                      slot: 1
+                      right: null
+                      operation: NONE
+                    - ==: me.tastycake.itemscore.utils.Operation
+                      left: null
+                      slot: 3
+                      right: null
+                      operation: NONE
+                    - ==: me.tastycake.itemscore.utils.Operation
+                      left: null
+                      slot: 5
+                      right: null
+                      operation: NONE
+                    - ==: me.tastycake.itemscore.utils.Operation
+                      left: null
+                      slot: 7
+                      right: null
+                      operation: NONE
+                    methods:
+                      ==: me.tastycake.itemscore.item.actions.ActionMap
+                      methods:
+                      - *id014
+                      params:
+                      - - ==: me.tastycake.itemscore.utils.Param
+                          action: false
+                          slot: 9
+                          type: org.bukkit.event.Event
+                          value:
+                            ==: me.tastycake.itemscore.item.actions.Action
+                            operations:
+                            - ==: me.tastycake.itemscore.utils.Operation
+                              left: &id015
+                                ==: me.tastycake.itemscore.utils.MethodSlot
+                                prefix: ''
+                                variable: true
+                                methodName: event
+                                slot: 0
+                              slot: 1
+                              right: null
+                              operation: NONE
+                            - ==: me.tastycake.itemscore.utils.Operation
+                              left: null
+                              slot: 3
+                              right: null
+                              operation: NONE
+                            - ==: me.tastycake.itemscore.utils.Operation
+                              left: null
+                              slot: 5
+                              right: null
+                              operation: NONE
+                            - ==: me.tastycake.itemscore.utils.Operation
+                              left: null
+                              slot: 7
+                              right: null
+                              operation: NONE
+                            methods:
+                              ==: me.tastycake.itemscore.item.actions.ActionMap
+                              methods:
+                              - *id015
+                              params:
+                              - []
+                            action: '9'
+                        - ==: me.tastycake.itemscore.utils.Param
+                          action: false
+                          slot: 18
+                          type: java.lang.String
+                          value: victim
+                    action: '9'
+                - ==: me.tastycake.itemscore.utils.Param
+                  action: false
+                  slot: 18
+                  type: org.bukkit.Location
+                  value:
+                    ==: me.tastycake.itemscore.item.actions.Action
+                    operations:
+                    - ==: me.tastycake.itemscore.utils.Operation
+                      left: &id016
+                        ==: me.tastycake.itemscore.utils.MethodSlot
+                        prefix: core.
+                        variable: false
+                        methodName: getSpecialVariable
+                        slot: 0
+                      slot: 1
+                      right: null
+                      operation: NONE
+                    - ==: me.tastycake.itemscore.utils.Operation
+                      left: null
+                      slot: 3
+                      right: null
+                      operation: NONE
+                    - ==: me.tastycake.itemscore.utils.Operation
+                      left: null
+                      slot: 5
+                      right: null
+                      operation: NONE
+                    - ==: me.tastycake.itemscore.utils.Operation
+                      left: null
+                      slot: 7
+                      right: null
+                      operation: NONE
+                    methods:
+                      ==: me.tastycake.itemscore.item.actions.ActionMap
+                      methods:
+                      - *id016
+                      params:
+                      - - ==: me.tastycake.itemscore.utils.Param
+                          action: false
+                          slot: 9
+                          type: org.bukkit.event.Event
+                          value:
+                            ==: me.tastycake.itemscore.item.actions.Action
+                            operations:
+                            - ==: me.tastycake.itemscore.utils.Operation
+                              left: &id017
+                                ==: me.tastycake.itemscore.utils.MethodSlot
+                                prefix: ''
+                                variable: true
+                                methodName: event
+                                slot: 0
+                              slot: 1
+                              right: null
+                              operation: NONE
+                            - ==: me.tastycake.itemscore.utils.Operation
+                              left: null
+                              slot: 3
+                              right: null
+                              operation: NONE
+                            - ==: me.tastycake.itemscore.utils.Operation
+                              left: null
+                              slot: 5
+                              right: null
+                              operation: NONE
+                            - ==: me.tastycake.itemscore.utils.Operation
+                              left: null
+                              slot: 7
+                              right: null
+                              operation: NONE
+                            methods:
+                              ==: me.tastycake.itemscore.item.actions.ActionMap
+                              methods:
+                              - *id017
+                              params:
+                              - []
+                            action: '9'
+                        - ==: me.tastycake.itemscore.utils.Param
+                          action: false
+                          slot: 18
+                          type: java.lang.String
+                          value: lastLocation
+                    action: '9'
+            action: '9'
+        - ==: me.tastycake.itemscore.utils.Param
+          action: false
+          slot: 18
+          type: java.lang.Integer
+          value: 100
+        - ==: me.tastycake.itemscore.utils.Param
+          action: false
+          slot: 27
+          type: java.lang.Integer
+          value: 1
+    action: projectileHitEntityEvent
+  flags: []
+  enchantments:
+    ==: me.tastycake.itemscore.item.EnchantedMap
+    enchantments: []
+    levels: []
